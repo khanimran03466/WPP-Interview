@@ -1,0 +1,133 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container ul {
+  display: grid;
+  list-style-type: none;
+  gap: 50px;
+  margin: 50px 0;
+  grid-template-columns: repeat(4, calc((100% - 150px) / 4));
+}
+
+.container ul li {
+  display: grid;
+  margin: 15px 0;
+}
+
+.container ul li:hover img {
+  transform: scale(1.068);
+}
+.card {
+  width: 100%;
+  height: auto;
+}
+
+.card :is(h2) {
+  font-size: 18px;
+  margin-bottom: 5px;
+  line-height: 24px;
+}
+.card :is(p) {
+  color: rgb(102, 102, 102);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.card img {
+  min-height: 450px;
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  box-shadow: 1px 1px 15px -8px rgb(0 0 0 / 75%);
+  border-radius: 15px;
+  margin-bottom: 25px;
+  transition: .5s;
+}
+
+.container .list-wrapper {
+  display: none;
+}
+
+.container .list-wrapper.active {
+  display: grid;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0px;
+}
+
+.nav-wrapper button {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.nav-wrapper button.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+
+.nav-wrapper{
+  display: grid;
+  column-gap: 50px;
+  grid-template-columns: auto auto;
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+.nav-wrapper button {
+  padding: 5px 15px;
+  word-break: break-word;
+  color: rgb(220, 53, 88);
+  margin: 0px;
+  font-size: 14px;
+  font-weight: 400;
+  font-size: 20px;
+  background: transparent;
+  border: 1px solid rgb(220, 53, 88);
+  transition: .5s;
+  border-radius: 5px;
+}
+
+.nav-wrapper button:hover{
+  background-color: #1C153F;
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .container ul {
+    grid-template-columns: repeat(3, calc((100% - 100px) / 3));
+  }
+}
+
+@media (max-width: 767px) {
+  .container ul {
+    grid-template-columns: repeat(1, calc((100% - 0px) / 1));
+  }
+
+  .card h2 {
+    font-size: 28px !important;
+    line-height: 1.5;
+  }
+
+  .card p {
+    font-size: 18px !important;
+  }
+
+  .container ul li {
+    margin-bottom: 30px;
+  }
+}
